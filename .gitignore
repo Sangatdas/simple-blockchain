@@ -15,6 +15,7 @@ downloads/
 eggs/
 .eggs/
 lib/
+bin/
 lib64/
 parts/
 sdist/
@@ -137,3 +138,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Config files from virtualenv
+pyvenv.cfg
