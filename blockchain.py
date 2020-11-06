@@ -10,11 +10,14 @@ from flask import Flask, jsonify, request
 
 class Blockchain:
     def __init__(self):
+        
+        # Create a new genesis block
 
 
     def new_block(self, proof, previous_hash):
         """
         Create a new Block in the Blockchain
+        A block contains block_number, timestamp, transactions, proof, hash of previous
 
         :param proof: The proof given by the Proof of Work algorithm
         :param previous_hash: Hash of previous Block
@@ -27,6 +30,7 @@ class Blockchain:
 
         # Reset the current list of transactions
 
+
         return block
 
     def new_transaction(self, sender, recipient, amount):
@@ -38,13 +42,17 @@ class Blockchain:
         :param amount: Amount
         :return: The index of the Block that will hold this transaction
         """
+        new_transaction = {
+
+        }
 
 
-        return
+        return new_transaction
 
     @property
     def last_block(self):
-        return
+        
+        return self.chain[-1]
 
     @staticmethod
     def hash(block):
@@ -55,6 +63,7 @@ class Blockchain:
         """
 
         # We must make sure that the Dictionary is Ordered, or we'll have inconsistent hashes
+
 
     def proof_of_work(self, last_block):
         """
@@ -67,7 +76,7 @@ class Blockchain:
         :return: <int>
         """
 
-        return
+        return "POW"
 
     @staticmethod
     def valid_proof(last_proof, proof, last_hash):
@@ -81,7 +90,7 @@ class Blockchain:
 
         """
 
-        return 
+        return "Valid proof"
 
 
 # Instantiate the Node
